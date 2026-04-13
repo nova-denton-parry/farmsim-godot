@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://c61ovjtscloyj"]
+
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_rxt4d"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rxt4d"]
+load_path = "res://.godot/imported/egg_items.png-d372da412061ac71ad755972debc342a.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y36lo"]
+atlas = SubResource("CompressedTexture2D_rxt4d")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_rxt4d")
+item_name = "egg"
+sprite = SubResource("AtlasTexture_y36lo")
+metadata/_custom_type_script = "uid://bt75mr3s3qk8d"

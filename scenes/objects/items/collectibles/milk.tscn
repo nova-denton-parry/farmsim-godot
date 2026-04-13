@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://4qeiu4t45q4g"]
+
+[ext_resource type="Script" uid="uid://rpxbrkpfbxab" path="res://scenes/objects/items/collectibles/collectible_resource.gd" id="1_sye7r"]
+[ext_resource type="PackedScene" uid="uid://xrb2wpcjhfcn" path="res://scenes/components/collectible_component.tscn" id="2_8f0fc"]
+[ext_resource type="Resource" uid="uid://ckq4q8ycb1vhn" path="res://scenes/objects/items/collectibles/collectible_item_resources/milk.tres" id="2_o6sw6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cl10w"]
+load_path = "res://.godot/imported/milk.png-4a46647e9d84c35eac28030e4f663322.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p8ft"]
+atlas = SubResource("CompressedTexture2D_cl10w")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_byg3t"]
+radius = 5.0
+height = 14.0
+
+[node name="Milk" type="Sprite2D" unique_id=1072973749]
+y_sort_enabled = true
+texture = SubResource("AtlasTexture_1p8ft")
+script = ExtResource("1_sye7r")
+item = ExtResource("2_o6sw6")
+
+[node name="CollectibleComponent" parent="." unique_id=1599329902 instance=ExtResource("2_8f0fc")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectibleComponent" unique_id=1976172207]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_byg3t")
+debug_color = Color(0, 0.6472293, 0.22492003, 0.41960785)

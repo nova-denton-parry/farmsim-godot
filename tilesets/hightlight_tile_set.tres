@@ -1,0 +1,41 @@
+[gd_resource type="TileSet" format=3 uid="uid://k84bmkm7geyo"]
+
+[ext_resource type="Texture2D" uid="uid://71l1vvx1o3g" path="res://assets/game/tilesets/highlights/highlight_close_tile.png" id="1_xeotj"]
+[ext_resource type="Texture2D" uid="uid://dl3jy61i83qp5" path="res://assets/game/tilesets/highlights/hightlight_med_tile.png" id="2_cdymq"]
+[ext_resource type="Texture2D" uid="uid://d8sn0u6n6mfn" path="res://assets/game/tilesets/highlights/hightlight_distance_tile.png" id="2_kjssq"]
+[ext_resource type="Texture2D" uid="uid://b6vb62s2758gl" path="res://assets/game/tilesets/highlights/hightlight_tile_green.png" id="3_cdymq"]
+[ext_resource type="Texture2D" uid="uid://df1t56qbd6uia" path="res://assets/game/tilesets/highlights/hightlight_extra_far_tile.png" id="3_ob163"]
+[ext_resource type="Texture2D" uid="uid://ctf5euih7tpwk" path="res://assets/game/tilesets/highlights/hightlight_tile_red.png" id="4_ob163"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xeotj"]
+texture = ExtResource("1_xeotj")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gn80"]
+texture = ExtResource("2_cdymq")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_resuo"]
+texture = ExtResource("3_ob163")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kjssq"]
+texture = ExtResource("2_kjssq")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cdymq"]
+texture = ExtResource("3_cdymq")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ob163"]
+texture = ExtResource("4_ob163")
+0:0/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_xeotj")
+sources/1 = SubResource("TileSetAtlasSource_1gn80")
+sources/2 = SubResource("TileSetAtlasSource_kjssq")
+sources/3 = SubResource("TileSetAtlasSource_cdymq")
+sources/4 = SubResource("TileSetAtlasSource_ob163")
+sources/11 = SubResource("TileSetAtlasSource_resuo")
+tile_proxies/coords_level = [[0, Vector2i(0, 0)], [4, Vector2i(0, 0)], [1, Vector2i(0, 0)], [4, Vector2i(1, 0)], [2, Vector2i(0, 0)], [4, Vector2i(2, 0)], [3, Vector2i(0, 0)], [4, Vector2i(3, 0)]]

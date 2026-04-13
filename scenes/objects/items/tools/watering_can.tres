@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Tool" format=3 uid="uid://cjamdpykasxw8"]
+
+[ext_resource type="Script" uid="uid://ubcwugt3i5yx" path="res://scenes/objects/items/tools/tool_class.gd" id="1_lr3yi"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8kukh"]
+load_path = "res://.godot/imported/all_items.png-8298dbd6feb8d57f19f0bd533a87afc9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sok5"]
+atlas = SubResource("CompressedTexture2D_8kukh")
+region = Rect2(32, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_lr3yi")
+tool_type = 4
+item_name = "watering can"
+max_stack = 1
+sprite = SubResource("AtlasTexture_2sok5")
+type = 0
+metadata/_custom_type_script = "uid://bt75mr3s3qk8d"

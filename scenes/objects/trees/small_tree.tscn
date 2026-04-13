@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dimqnc61al7ug"]
+
+[ext_resource type="Shader" uid="uid://bv1q85rlai5dg" path="res://scenes/objects/shake.gdshader" id="1_w057i"]
+[ext_resource type="Texture2D" uid="uid://bcl7vyeuvsgc1" path="res://assets/game/objects/trees_stumps_and_bushes.png" id="1_wjqkr"]
+[ext_resource type="Script" uid="uid://wifcip6l0mqi" path="res://scenes/objects/trees/small_tree.gd" id="2_f4wgc"]
+[ext_resource type="PackedScene" uid="uid://c3pc7kxvx1urk" path="res://scenes/components/hurt_component.tscn" id="3_6vpey"]
+[ext_resource type="PackedScene" uid="uid://bf2d0n7x6n7ll" path="res://scenes/components/damage_component.tscn" id="4_0ia52"]
+[ext_resource type="PackedScene" uid="uid://xi80cdgmk3ay" path="res://scenes/objects/items/collectibles/wood.tscn" id="4_skbjc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_skbjc"]
+resource_local_to_scene = true
+shader = ExtResource("1_w057i")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyb6m"]
+atlas = ExtResource("1_wjqkr")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_au4vd"]
+radius = 3.0
+height = 8.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w057i"]
+radius = 5.0
+height = 14.0
+
+[node name="SmallTree" type="Sprite2D" unique_id=1492668964]
+z_index = 1
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_skbjc")
+texture = SubResource("AtlasTexture_xyb6m")
+offset = Vector2(0, -4)
+script = ExtResource("2_f4wgc")
+log_scene = ExtResource("4_skbjc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1190224736]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1662974391]
+position = Vector2(0, 6)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_au4vd")
+debug_color = Color(0, 0.6, 0.69803923, 0.7411765)
+
+[node name="HurtComponent" parent="." unique_id=702784219 instance=ExtResource("3_6vpey")]
+tool = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1662457910]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_w057i")
+debug_color = Color(0.6509804, 0.40784314, 0.827451, 0.6509804)
+
+[node name="DamageComponent" parent="." unique_id=2076560408 instance=ExtResource("4_0ia52")]
+max_damage = 3

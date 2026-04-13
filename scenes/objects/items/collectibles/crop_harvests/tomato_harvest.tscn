@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cdrdblet5gwfe"]
+
+[ext_resource type="PackedScene" uid="uid://xrb2wpcjhfcn" path="res://scenes/components/collectible_component.tscn" id="1_83tm5"]
+[ext_resource type="Texture2D" uid="uid://cmq60oyfqby4y" path="res://assets/game/objects/new_crops/crop_harvests/tomato_harvest.png" id="1_g1lpm"]
+[ext_resource type="Script" uid="uid://rpxbrkpfbxab" path="res://scenes/objects/items/collectibles/collectible_resource.gd" id="2_0c8il"]
+[ext_resource type="Resource" uid="uid://tvga12r33boq" path="res://scenes/objects/items/collectibles/crop_harvests/crop_harvest_collectible_resources/tomato_harvest.tres" id="3_y57io"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fy6vi"]
+radius = 12.0
+
+[node name="TomatoHarvest" type="Sprite2D" unique_id=1601282534]
+texture = ExtResource("1_g1lpm")
+script = ExtResource("2_0c8il")
+item = ExtResource("3_y57io")
+
+[node name="CollectibleComponent" parent="." unique_id=1599329902 instance=ExtResource("1_83tm5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectibleComponent" unique_id=1100670675]
+y_sort_enabled = true
+rotation = 1.5707964
+shape = SubResource("CircleShape2D_fy6vi")
+debug_color = Color(5.7756904e-07, 0.63953006, 0.36782283, 0.41960785)

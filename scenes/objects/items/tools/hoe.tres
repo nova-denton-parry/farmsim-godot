@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Tool" format=3 uid="uid://bas1iw5msnwba"]
+
+[ext_resource type="Script" uid="uid://ubcwugt3i5yx" path="res://scenes/objects/items/tools/tool_class.gd" id="1_m6b38"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8kukh"]
+load_path = "res://.godot/imported/all_items.png-8298dbd6feb8d57f19f0bd533a87afc9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw2tn"]
+atlas = SubResource("CompressedTexture2D_8kukh")
+region = Rect2(48, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_m6b38")
+tool_type = 2
+item_name = "hoe"
+max_stack = 1
+sprite = SubResource("AtlasTexture_uw2tn")
+type = 0
+metadata/_custom_type_script = "uid://bt75mr3s3qk8d"

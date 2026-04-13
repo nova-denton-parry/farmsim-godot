@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://cu0q4jrrmcht3"]
+
+[ext_resource type="Theme" uid="uid://bekha0eot2h8h" path="res://scenes/ui/game_ui_theme.tres" id="1_py1kr"]
+[ext_resource type="Texture2D" uid="uid://b6gj8x78modn" path="res://assets/ui/ui_sprites/all_ui_assets_on_one_sheet.png" id="2_anq1i"]
+[ext_resource type="Script" uid="uid://ca6mnbaay4rjg" path="res://scenes/ui/menu_screen.gd" id="2_mkhoe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkhoe"]
+atlas = ExtResource("2_anq1i")
+region = Rect2(321, 706, 15, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5qb7"]
+atlas = ExtResource("2_anq1i")
+region = Rect2(340, 721, 10, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4iww"]
+atlas = ExtResource("2_anq1i")
+region = Rect2(352, 800, 14, 16)
+
+[node name="MenuScreen" type="PanelContainer" unique_id=1258091192]
+z_index = 2
+custom_minimum_size = Vector2(484, 256)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -128.0
+offset_right = 242.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"MenuPanel"
+script = ExtResource("2_mkhoe")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2082725043]
+layout_mode = 2
+theme = ExtResource("1_py1kr")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=35118689]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"MenuHeaderPanel"
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer" unique_id=2089475594]
+layout_mode = 2
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"MenuHeader"
+text = "Menu"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2011818369]
+layout_mode = 2
+theme = ExtResource("1_py1kr")
+alignment = 1
+
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1370745643]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"ToolButton"
+text = "Save Game"
+icon = SubResource("AtlasTexture_mkhoe")
+
+[node name="LoadButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1479616610]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"ToolButton"
+text = "Load Game"
+icon = SubResource("AtlasTexture_u5qb7")
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=288370283]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"ToolButton"
+text = "Quit"
+icon = SubResource("AtlasTexture_c4iww")
+
+[node name="StatusPanel" type="PanelContainer" parent="." unique_id=2113998231]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"InventoryItemPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="StatusPanel" unique_id=1624627144]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="StatusLabel" type="Label" parent="StatusPanel/MarginContainer" unique_id=375299878]
+layout_mode = 2
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"TooltipLabel"
+text = "Game Saved Successfully!"
+
+[node name="QuitDialog" type="PanelContainer" parent="." unique_id=545019380]
+visible = false
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"MenuPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="QuitDialog" unique_id=2101416172]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="QuitDialog/MarginContainer" unique_id=509253959]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="QuitDialog/MarginContainer/VBoxContainer" unique_id=328241793]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+
+[node name="Label" type="Label" parent="QuitDialog/MarginContainer/VBoxContainer/MarginContainer" unique_id=1055874335]
+layout_mode = 2
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"TooltipLabel"
+text = "Are you sure
+ you want to quit?"
+horizontal_alignment = 1
+
+[node name="SaveQuitButton" type="Button" parent="QuitDialog/MarginContainer/VBoxContainer" unique_id=1772072527]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"ToolButton"
+theme_override_font_sizes/font_size = 10
+text = "Save and Quit"
+
+[node name="JustQuitButton" type="Button" parent="QuitDialog/MarginContainer/VBoxContainer" unique_id=1989610752]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"ToolButton"
+theme_override_font_sizes/font_size = 10
+text = "Just Quit"
+
+[node name="CancelButton" type="Button" parent="QuitDialog/MarginContainer/VBoxContainer" unique_id=1374722507]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_py1kr")
+theme_type_variation = &"ToolButton"
+theme_override_font_sizes/font_size = 10
+text = "Cancel"

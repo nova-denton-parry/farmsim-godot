@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ccm0crl00yrgk"]
+
+[ext_resource type="Script" uid="uid://rpxbrkpfbxab" path="res://scenes/objects/items/collectibles/collectible_resource.gd" id="1_o3fxj"]
+[ext_resource type="Resource" uid="uid://dwfwsugw18opt" path="res://scenes/objects/items/collectibles/collectible_item_resources/stone.tres" id="2_la07n"]
+[ext_resource type="PackedScene" uid="uid://xrb2wpcjhfcn" path="res://scenes/components/collectible_component.tscn" id="3_x48v4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_63grw"]
+load_path = "res://.godot/imported/all_items.png-8298dbd6feb8d57f19f0bd533a87afc9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00kfm"]
+atlas = SubResource("CompressedTexture2D_63grw")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fip5g"]
+radius = 5.0
+height = 10.0
+
+[node name="Stone" type="Sprite2D" unique_id=754761769]
+texture = SubResource("AtlasTexture_00kfm")
+script = ExtResource("1_o3fxj")
+item = ExtResource("2_la07n")
+
+[node name="CollectibleComponent" parent="." unique_id=1599329902 instance=ExtResource("3_x48v4")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectibleComponent" unique_id=1781749142]
+y_sort_enabled = true
+position = Vector2(0, 1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fip5g")
+debug_color = Color(1.347661e-06, 0.6510443, 0.071202405, 0.41960785)

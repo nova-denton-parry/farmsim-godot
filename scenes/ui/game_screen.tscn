@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://cy2btaa13mldn"]
+
+[ext_resource type="Script" uid="uid://cgc14ysc3jsxd" path="res://scenes/ui/game_screen.gd" id="1_0kkfd"]
+[ext_resource type="Theme" uid="uid://bekha0eot2h8h" path="res://scenes/ui/game_ui_theme.tres" id="1_e2vrk"]
+[ext_resource type="PackedScene" uid="uid://dpu0ljdkgt1sx" path="res://scenes/ui/day_night_panel.tscn" id="4_gkbp4"]
+[ext_resource type="PackedScene" uid="uid://cu0q4jrrmcht3" path="res://scenes/ui/menu_screen.tscn" id="4_nwa5a"]
+[ext_resource type="PackedScene" uid="uid://c7h2n5v6o104" path="res://scenes/ui/inventory/inventory_screen.tscn" id="5_0kkfd"]
+[ext_resource type="PackedScene" uid="uid://cfn2ylvkls1la" path="res://scenes/ui/inventory/hotbar.tscn" id="6_nwa5a"]
+
+[node name="GameScreen" type="CanvasLayer" unique_id=1667672374]
+process_mode = 3
+script = ExtResource("1_0kkfd")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=772257619]
+process_mode = 1
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_e2vrk")
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer" unique_id=2067545409]
+process_mode = 2
+visible = false
+z_index = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_e2vrk")
+theme_type_variation = &"MenuTabContainer"
+theme_override_constants/side_margin = 18
+theme_override_constants/tab_separation = 4
+theme_override_constants/outline_size = 0
+current_tab = 0
+clip_tabs = false
+tab_0/title = "Inventory"
+tab_1/title = "Menu"
+
+[node name="InventoryScreen" parent="MarginContainer/TabContainer" unique_id=900963686 instance=ExtResource("5_0kkfd")]
+z_index = 0
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_tab_index = 0
+metadata/_tab_name = "Inventory"
+
+[node name="MenuScreen" parent="MarginContainer/TabContainer" unique_id=1258091192 instance=ExtResource("4_nwa5a")]
+visible = false
+z_index = 0
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Menu"
+
+[node name="DayNightPanel" parent="MarginContainer" unique_id=1308866594 instance=ExtResource("4_gkbp4")]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="TooltipContainer" type="PanelContainer" parent="." unique_id=1381128533]
+process_mode = 2
+visible = false
+z_index = 3
+offset_left = 143.0
+offset_top = 151.0
+offset_right = 213.0
+offset_bottom = 174.0
+mouse_filter = 1
+theme = ExtResource("1_e2vrk")
+theme_type_variation = &"TooltipPanel"
+
+[node name="TooltipLabel" type="Label" parent="TooltipContainer" unique_id=1296188132]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("1_e2vrk")
+theme_type_variation = &"TooltipLabel"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="InventorySelectContainer" type="CenterContainer" parent="." unique_id=323686077]
+process_mode = 2
+visible = false
+z_index = 3
+offset_right = 16.0
+offset_bottom = 16.0
+theme = ExtResource("1_e2vrk")
+
+[node name="InventorySelectSprite" type="TextureRect" parent="InventorySelectContainer" unique_id=914316706]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Hotbar" parent="." unique_id=1005133155 instance=ExtResource("6_nwa5a")]
+z_index = 1
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 101.0
+offset_top = 296.0
+offset_right = 539.0
+offset_bottom = 350.0

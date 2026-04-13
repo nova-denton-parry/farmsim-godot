@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://khrfkpec1ful"]
+
+[ext_resource type="Script" uid="uid://d2tmph3nf2e42" path="res://scenes/objects/crops/crop_class.gd" id="1_fewml"]
+[ext_resource type="PackedScene" uid="uid://cdrdblet5gwfe" path="res://scenes/objects/items/collectibles/crop_harvests/tomato_harvest.tscn" id="2_fewml"]
+[ext_resource type="Texture2D" uid="uid://500qwijwxixh" path="res://assets/game/objects/new_crops/unwatered_plants/tomato_plant_unwatered.png" id="3_1a5wv"]
+[ext_resource type="Texture2D" uid="uid://uet01jfuc3gu" path="res://assets/game/objects/new_crops/watered_plants/tomato_plant_watered.png" id="4_0dngh"]
+[ext_resource type="PackedScene" uid="uid://dehue2rd7cm1h" path="res://scenes/objects/crops/watering_particles.tscn" id="4_yvgrj"]
+[ext_resource type="PackedScene" uid="uid://cft8ldnlgx8vj" path="res://scenes/objects/crops/flowering_particles.tscn" id="5_2bta7"]
+[ext_resource type="PackedScene" uid="uid://dra51wm66kke3" path="res://scenes/objects/crops/growth_cycle_component.tscn" id="6_dhmbl"]
+[ext_resource type="PackedScene" uid="uid://c3pc7kxvx1urk" path="res://scenes/components/hurt_component.tscn" id="7_4ks68"]
+[ext_resource type="PackedScene" uid="uid://ol4foobji8sr" path="res://scenes/components/harvestable_component.tscn" id="8_oxgwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmya3"]
+size = Vector2(16, 16)
+
+[node name="Tomato" type="Node2D" unique_id=1651741341 node_paths=PackedStringArray("sprite_2d", "watering_particles", "flowering_particles", "growth_cycle_component", "hurt_component")]
+script = ExtResource("1_fewml")
+harvest_scene = ExtResource("2_fewml")
+sprite_2d = NodePath("Sprite2D")
+watering_particles = NodePath("WateringParticles")
+flowering_particles = NodePath("FloweringParticles")
+growth_cycle_component = NodePath("GrowthCycleComponent")
+hurt_component = NodePath("HurtComponent")
+unwatered_sprite = ExtResource("3_1a5wv")
+watered_sprite = ExtResource("4_0dngh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1583551007]
+y_sort_enabled = true
+texture = ExtResource("3_1a5wv")
+offset = Vector2(-0.5, 3)
+hframes = 6
+
+[node name="WateringParticles" parent="." unique_id=1829919 instance=ExtResource("4_yvgrj")]
+
+[node name="FloweringParticles" parent="." unique_id=2118394561 instance=ExtResource("5_2bta7")]
+position = Vector2(0, -5)
+
+[node name="GrowthCycleComponent" parent="." unique_id=1045285660 instance=ExtResource("6_dhmbl")]
+total_growth_states = 6
+days_until_harvest = 6
+
+[node name="HurtComponent" parent="." unique_id=702784219 instance=ExtResource("7_4ks68")]
+position = Vector2(0, -4.5)
+tool = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1396224815]
+y_sort_enabled = true
+position = Vector2(-1, 1.5)
+shape = SubResource("RectangleShape2D_rmya3")
+
+[node name="HarvestableComponent" parent="." unique_id=1041644380 node_paths=PackedStringArray("crop") instance=ExtResource("8_oxgwr")]
+crop = NodePath("..")

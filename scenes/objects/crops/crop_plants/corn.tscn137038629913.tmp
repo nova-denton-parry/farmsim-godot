@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b7wwopdn5vhuw"]
+
+[ext_resource type="Script" uid="uid://d2tmph3nf2e42" path="res://scenes/objects/crops/crop_plants/crop_class.gd" id="1_eiuyb"]
+[ext_resource type="PackedScene" uid="uid://b52v5vqon0sto" path="res://scenes/objects/crops/crop_harvests/corn_harvest.tscn" id="2_3xyfa"]
+[ext_resource type="PackedScene" uid="uid://dehue2rd7cm1h" path="res://scenes/objects/crops/crop_plants/watering_particles.tscn" id="2_dhqcx"]
+[ext_resource type="Texture2D" uid="uid://bt5owbiqvwbnt" path="res://assets/game/objects/corn_plant.png" id="2_eiuyb"]
+[ext_resource type="PackedScene" uid="uid://c3pc7kxvx1urk" path="res://scenes/components/hurt_component.tscn" id="2_hnuak"]
+[ext_resource type="PackedScene" uid="uid://cft8ldnlgx8vj" path="res://scenes/objects/crops/crop_plants/flowering_particles.tscn" id="3_dhqcx"]
+[ext_resource type="PackedScene" uid="uid://dra51wm66kke3" path="res://scenes/objects/crops/crop_plants/growth_cycle_component.tscn" id="5_rmya3"]
+[ext_resource type="PackedScene" uid="uid://ol4foobji8sr" path="res://scenes/components/harvestable_component.tscn" id="7_j1ajf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmya3"]
+size = Vector2(16, 16)
+
+[node name="Corn" type="Node2D" unique_id=1651741341 node_paths=PackedStringArray("sprite_2d", "watering_particles", "flowering_particles", "growth_cycle_component", "hurt_component")]
+script = ExtResource("1_eiuyb")
+harvest_scene = ExtResource("2_3xyfa")
+sprite_2d = NodePath("Sprite2D")
+watering_particles = NodePath("WateringParticles")
+flowering_particles = NodePath("FloweringParticles")
+growth_cycle_component = NodePath("GrowthCycleComponent")
+hurt_component = NodePath("HurtComponent")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1583551007]
+texture = ExtResource("2_eiuyb")
+offset = Vector2(-0.5, -12)
+hframes = 5
+
+[node name="WateringParticles" parent="." unique_id=1829919 instance=ExtResource("2_dhqcx")]
+
+[node name="FloweringParticles" parent="." unique_id=2118394561 instance=ExtResource("3_dhqcx")]
+position = Vector2(0, -18)
+
+[node name="GrowthCycleComponent" parent="." unique_id=1045285660 instance=ExtResource("5_rmya3")]
+days_until_harvest = 1
+
+[node name="HurtComponent" parent="." unique_id=702784219 instance=ExtResource("2_hnuak")]
+position = Vector2(0, -4.5)
+tool = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1396224815]
+shape = SubResource("RectangleShape2D_rmya3")
+
+[node name="HarvestableComponent" parent="." unique_id=1041644380 node_paths=PackedStringArray("crop") instance=ExtResource("7_j1ajf")]
+crop = NodePath("..")

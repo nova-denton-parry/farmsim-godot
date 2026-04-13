@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://ckq4q8ycb1vhn"]
+
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_sloqe"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sloqe"]
+load_path = "res://.godot/imported/milk.png-4a46647e9d84c35eac28030e4f663322.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8o30"]
+atlas = SubResource("CompressedTexture2D_sloqe")
+region = Rect2(0, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_sloqe")
+item_name = "milk"
+sprite = SubResource("AtlasTexture_b8o30")
+metadata/_custom_type_script = "uid://bt75mr3s3qk8d"

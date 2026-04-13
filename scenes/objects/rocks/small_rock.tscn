@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b2qnrcqkcv0an"]
+
+[ext_resource type="Texture2D" uid="uid://dwsn3bvohv282" path="res://assets/game/objects/mushrooms_flowers_stones.png" id="1_4y611"]
+[ext_resource type="Shader" uid="uid://bv1q85rlai5dg" path="res://scenes/objects/shake.gdshader" id="1_gs3xh"]
+[ext_resource type="PackedScene" uid="uid://c3pc7kxvx1urk" path="res://scenes/components/hurt_component.tscn" id="2_1r3eh"]
+[ext_resource type="Script" uid="uid://bg53g76qtol6" path="res://scenes/objects/rocks/small_rock.gd" id="2_gs3xh"]
+[ext_resource type="PackedScene" uid="uid://bf2d0n7x6n7ll" path="res://scenes/components/damage_component.tscn" id="3_gs3xh"]
+[ext_resource type="PackedScene" uid="uid://ccm0crl00yrgk" path="res://scenes/objects/items/collectibles/stone.tscn" id="4_1d4ag"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1d4ag"]
+resource_local_to_scene = true
+shader = ExtResource("1_gs3xh")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d4ag"]
+atlas = ExtResource("1_4y611")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_joku3"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dol0o"]
+radius = 8.0
+height = 18.0
+
+[node name="SmallRock" type="Sprite2D" unique_id=1872106289]
+z_index = 1
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_1d4ag")
+texture = SubResource("AtlasTexture_1d4ag")
+script = ExtResource("2_gs3xh")
+stone_scene = ExtResource("4_1d4ag")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1808440986]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1449767564]
+position = Vector2(0, 2)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_joku3")
+
+[node name="HurtComponent" parent="." unique_id=702784219 instance=ExtResource("2_1r3eh")]
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=1108027307]
+shape = SubResource("CapsuleShape2D_dol0o")
+debug_color = Color(0.9372549, 0, 0.63529414, 0.28235295)
+
+[node name="DamageComponent" parent="." unique_id=2076560408 instance=ExtResource("3_gs3xh")]
+max_damage = 3

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://c7h2n5v6o104"]
+
+[ext_resource type="Theme" uid="uid://bekha0eot2h8h" path="res://scenes/ui/game_ui_theme.tres" id="1_mh6ia"]
+[ext_resource type="Script" uid="uid://dh2j75qa4uthv" path="res://scenes/ui/inventory/inventory_screen.gd" id="2_mtrmx"]
+[ext_resource type="PackedScene" uid="uid://jqvmkgfuvdag" path="res://scenes/ui/inventory/inventory_row.tscn" id="3_b5uoy"]
+
+[node name="InventoryScreen" type="PanelContainer" unique_id=900963686]
+z_index = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 7.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mh6ia")
+theme_type_variation = &"MenuPanel"
+script = ExtResource("2_mtrmx")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1806166451]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1017029224]
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("1_mh6ia")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=194148070]
+layout_mode = 2
+theme = ExtResource("1_mh6ia")
+theme_type_variation = &"MenuHeaderPanel"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer" unique_id=1057389031]
+layout_mode = 2
+theme = ExtResource("1_mh6ia")
+theme_type_variation = &"MenuHeader"
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="InventoryRow" parent="MarginContainer/VBoxContainer" unique_id=1065820458 instance=ExtResource("3_b5uoy")]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="InventoryRow2" parent="MarginContainer/VBoxContainer" unique_id=1966380238 instance=ExtResource("3_b5uoy")]
+layout_mode = 2
+
+[node name="InventoryRow3" parent="MarginContainer/VBoxContainer" unique_id=579147168 instance=ExtResource("3_b5uoy")]
+layout_mode = 2
+
+[node name="InventoryRow4" parent="MarginContainer/VBoxContainer" unique_id=334253092 instance=ExtResource("3_b5uoy")]
+layout_mode = 2
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]

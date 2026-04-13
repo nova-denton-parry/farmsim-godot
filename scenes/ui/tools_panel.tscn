@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bkmulh5gknfay"]
+
+[ext_resource type="Theme" uid="uid://bekha0eot2h8h" path="res://scenes/ui/game_ui_theme.tres" id="1_2yiqu"]
+[ext_resource type="Script" uid="uid://canmm3smahmup" path="res://scenes/ui/tools_panel.gd" id="2_a7ivs"]
+[ext_resource type="Texture2D" uid="uid://crhff1v6wns0t" path="res://assets/game/objects/items/all_items.png" id="2_xkgdf"]
+[ext_resource type="ButtonGroup" uid="uid://dhb23serk508f" path="res://scenes/ui/tool_button_group.tres" id="3_0jxvs"]
+[ext_resource type="Texture2D" uid="uid://bq0okagkyhpao" path="res://assets/game/objects/new_crops/crop_seeds/corn_seeds.png" id="5_a6726"]
+[ext_resource type="Texture2D" uid="uid://c7e75f3ig48yr" path="res://assets/game/objects/new_crops/crop_seeds/tomato_seeds.png" id="6_3neg6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7ivs"]
+atlas = ExtResource("2_xkgdf")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gbtgy"]
+load_path = "res://.godot/imported/dungeon_items.png-e6a5cb4a66002baeb29948d71403b81d.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6726"]
+atlas = SubResource("CompressedTexture2D_gbtgy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0jxvs"]
+load_path = "res://.godot/imported/all_items.png-8298dbd6feb8d57f19f0bd533a87afc9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbtgy"]
+atlas = SubResource("CompressedTexture2D_0jxvs")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a6726"]
+load_path = "res://.godot/imported/all_items.png-8298dbd6feb8d57f19f0bd533a87afc9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3neg6"]
+atlas = SubResource("CompressedTexture2D_a6726")
+region = Rect2(32, 16, 16, 16)
+
+[node name="ToolsPanel" type="PanelContainer" unique_id=976125385]
+offset_right = 26.0
+offset_bottom = 26.0
+theme = ExtResource("1_2yiqu")
+theme_type_variation = &"DarkWoodPanel"
+script = ExtResource("2_a7ivs")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=912995893]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1838810660]
+layout_mode = 2
+
+[node name="ToolAxe" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1793294942]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+button_group = ExtResource("3_0jxvs")
+icon = SubResource("AtlasTexture_a7ivs")
+icon_alignment = 1
+
+[node name="ToolPickaxe" type="Button" parent="MarginContainer/HBoxContainer" unique_id=253332598]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+button_group = ExtResource("3_0jxvs")
+icon = SubResource("AtlasTexture_a6726")
+icon_alignment = 1
+
+[node name="ToolTilling" type="Button" parent="MarginContainer/HBoxContainer" unique_id=165084532]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+button_group = ExtResource("3_0jxvs")
+icon = SubResource("AtlasTexture_gbtgy")
+icon_alignment = 1
+
+[node name="ToolWatering" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1764378780]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+button_group = ExtResource("3_0jxvs")
+icon = SubResource("AtlasTexture_3neg6")
+icon_alignment = 1
+
+[node name="ToolCorn" type="Button" parent="MarginContainer/HBoxContainer" unique_id=2013959945]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+button_group = ExtResource("3_0jxvs")
+icon = ExtResource("5_a6726")
+icon_alignment = 1
+
+[node name="ToolTomato" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1248696265]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"ToolButton"
+toggle_mode = true
+button_group = ExtResource("3_0jxvs")
+icon = ExtResource("6_3neg6")
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolAxe" to="." method="_on_tool_axe_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolPickaxe" to="." method="_on_tool_pickaxe_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolTilling" to="." method="_on_tool_tilling_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolWatering" to="." method="_on_tool_watering_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolCorn" to="." method="_on_tool_corn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolTomato" to="." method="_on_tool_tomato_pressed"]

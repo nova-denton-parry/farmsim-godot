@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemDatabase" format=3 uid="uid://brwrejc2k7kxq"]
+
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_vatgk"]
+[ext_resource type="Resource" uid="uid://be66bpx1mxyl1" path="res://scenes/objects/items/tools/axe.tres" id="2_1is5m"]
+[ext_resource type="Script" uid="uid://dwvqaulc1egp5" path="res://scripts/globals/item_database.gd" id="2_v3f77"]
+[ext_resource type="Resource" uid="uid://bas1iw5msnwba" path="res://scenes/objects/items/tools/hoe.tres" id="3_2lmvt"]
+[ext_resource type="Resource" uid="uid://jw43cywkc8uh" path="res://scenes/objects/items/tools/pickaxe.tres" id="4_worcj"]
+[ext_resource type="Resource" uid="uid://cjamdpykasxw8" path="res://scenes/objects/items/tools/watering_can.tres" id="5_t4to0"]
+[ext_resource type="Resource" uid="uid://tvga12r33boq" path="res://scenes/objects/items/collectibles/crop_harvests/crop_harvest_collectible_resources/tomato_harvest.tres" id="6_w0pyp"]
+[ext_resource type="Resource" uid="uid://cgh6va6qm0at3" path="res://scenes/objects/items/collectibles/crop_harvests/crop_harvest_collectible_resources/corn_harvest.tres" id="7_5emej"]
+[ext_resource type="Resource" uid="uid://c61ovjtscloyj" path="res://scenes/objects/items/collectibles/collectible_item_resources/egg.tres" id="8_e3wmm"]
+[ext_resource type="Resource" uid="uid://ckq4q8ycb1vhn" path="res://scenes/objects/items/collectibles/collectible_item_resources/milk.tres" id="9_4iwmg"]
+[ext_resource type="Resource" uid="uid://dwfwsugw18opt" path="res://scenes/objects/items/collectibles/collectible_item_resources/stone.tres" id="10_qphx8"]
+[ext_resource type="Resource" uid="uid://d4e3arfxw24jy" path="res://scenes/objects/items/collectibles/collectible_item_resources/wood.tres" id="11_a0qsy"]
+[ext_resource type="Resource" uid="uid://pp08pekbk8am" path="res://scenes/objects/items/seeds/corn_seeds.tres" id="12_e3wmm"]
+[ext_resource type="Resource" uid="uid://cprdituys4kak" path="res://scenes/objects/items/seeds/tomato_seeds.tres" id="13_4iwmg"]
+
+[resource]
+script = ExtResource("2_v3f77")
+items = Array[ExtResource("1_vatgk")]([ExtResource("2_1is5m"), ExtResource("3_2lmvt"), ExtResource("4_worcj"), ExtResource("5_t4to0"), ExtResource("6_w0pyp"), ExtResource("7_5emej"), ExtResource("8_e3wmm"), ExtResource("9_4iwmg"), ExtResource("10_qphx8"), ExtResource("11_a0qsy"), ExtResource("12_e3wmm"), ExtResource("13_4iwmg")])
+metadata/_custom_type_script = "uid://dwvqaulc1egp5"

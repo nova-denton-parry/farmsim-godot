@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://d4e3arfxw24jy"]
+
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_1125s"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1125s"]
+load_path = "res://.godot/imported/all_items.png-8298dbd6feb8d57f19f0bd533a87afc9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssoi4"]
+atlas = SubResource("CompressedTexture2D_1125s")
+region = Rect2(48, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_1125s")
+item_name = "wood"
+sprite = SubResource("AtlasTexture_ssoi4")
+metadata/_custom_type_script = "uid://bt75mr3s3qk8d"

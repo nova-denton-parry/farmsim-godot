@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ol4foobji8sr"]
+
+[ext_resource type="Script" uid="uid://c2r7cieaxewod" path="res://scenes/components/harvestable_component.gd" id="1_5qjru"]
+
+[node name="HarvestableComponent" type="Node" unique_id=1041644380]
+script = ExtResource("1_5qjru")

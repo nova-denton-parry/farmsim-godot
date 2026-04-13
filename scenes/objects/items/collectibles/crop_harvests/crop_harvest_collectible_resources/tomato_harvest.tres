@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://tvga12r33boq"]
+
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_4una4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4una4"]
+load_path = "res://.godot/imported/tomato_harvest.png-4f0b4a2a00fb96167846311c43644d4b.ctex"
+
+[resource]
+script = ExtResource("1_4una4")
+item_name = "tomato"
+sprite = SubResource("CompressedTexture2D_4una4")
+metadata/_custom_type_script = "uid://bt75mr3s3qk8d"

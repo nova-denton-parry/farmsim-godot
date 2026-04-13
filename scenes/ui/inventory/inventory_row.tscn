@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://jqvmkgfuvdag"]
+
+[ext_resource type="Theme" uid="uid://bekha0eot2h8h" path="res://scenes/ui/game_ui_theme.tres" id="1_3sf8v"]
+[ext_resource type="PackedScene" uid="uid://044yelp1xiau" path="res://scenes/ui/inventory/inventory_square.tscn" id="2_hbtrv"]
+
+[node name="InventoryRow" type="MarginContainer" unique_id=391169839]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 414.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_3sf8v")
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1340537036]
+process_mode = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="InventorySquare" parent="HBoxContainer" unique_id=1323460144 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare2" parent="HBoxContainer" unique_id=1957607746 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare3" parent="HBoxContainer" unique_id=1650220832 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare4" parent="HBoxContainer" unique_id=622398488 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare5" parent="HBoxContainer" unique_id=510442067 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare6" parent="HBoxContainer" unique_id=837572 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare7" parent="HBoxContainer" unique_id=95321513 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare8" parent="HBoxContainer" unique_id=41543805 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare9" parent="HBoxContainer" unique_id=677827085 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare10" parent="HBoxContainer" unique_id=224829191 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare11" parent="HBoxContainer" unique_id=1899953993 instance=ExtResource("2_hbtrv")]
+layout_mode = 2
+
+[node name="InventorySquare12" parent="HBoxContainer" unique_id=368695788 instance=ExtResource("2_hbtrv")]
+layout_mode = 2

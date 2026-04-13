@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b52v5vqon0sto"]
+
+[ext_resource type="Texture2D" uid="uid://bsucda7bnj4o7" path="res://assets/game/objects/new_crops/crop_harvests/corn_harvest.png" id="1_2k3yk"]
+[ext_resource type="Script" uid="uid://rpxbrkpfbxab" path="res://scenes/objects/items/collectibles/collectible_resource.gd" id="2_eqjjk"]
+[ext_resource type="PackedScene" uid="uid://xrb2wpcjhfcn" path="res://scenes/components/collectible_component.tscn" id="2_xie17"]
+[ext_resource type="Resource" uid="uid://cgh6va6qm0at3" path="res://scenes/objects/items/collectibles/crop_harvests/crop_harvest_collectible_resources/corn_harvest.tres" id="3_jfgya"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2k3yk"]
+radius = 12.0
+
+[node name="CornHarvest" type="Sprite2D" unique_id=1625447257]
+texture = ExtResource("1_2k3yk")
+script = ExtResource("2_eqjjk")
+item = ExtResource("3_jfgya")
+
+[node name="CollectibleComponent" parent="." unique_id=1599329902 instance=ExtResource("2_xie17")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectibleComponent" unique_id=1868935107]
+y_sort_enabled = true
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_2k3yk")
+debug_color = Color(0, 0.64910036, 0.16861635, 0.41960785)

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://xi80cdgmk3ay"]
+
+[ext_resource type="Script" uid="uid://rpxbrkpfbxab" path="res://scenes/objects/items/collectibles/collectible_resource.gd" id="1_ignbq"]
+[ext_resource type="PackedScene" uid="uid://xrb2wpcjhfcn" path="res://scenes/components/collectible_component.tscn" id="2_e2a05"]
+[ext_resource type="Resource" uid="uid://d4e3arfxw24jy" path="res://scenes/objects/items/collectibles/collectible_item_resources/wood.tres" id="2_h7i0g"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fmm3e"]
+load_path = "res://.godot/imported/all_items.png-8298dbd6feb8d57f19f0bd533a87afc9.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6ow8"]
+atlas = SubResource("CompressedTexture2D_fmm3e")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s5rqd"]
+radius = 2.8259852
+height = 12.775684
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2a05"]
+radius = 2.1472988
+height = 8.478818
+
+[node name="Wood" type="Sprite2D" unique_id=1637389036]
+texture = SubResource("AtlasTexture_b6ow8")
+script = ExtResource("1_ignbq")
+item = ExtResource("2_h7i0g")
+
+[node name="CollectibleComponent" parent="." unique_id=1599329902 instance=ExtResource("2_e2a05")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectibleComponent" unique_id=277770886]
+position = Vector2(-1, 1)
+rotation = -0.8269536
+shape = SubResource("CapsuleShape2D_s5rqd")
+debug_color = Color(2.2621452e-06, 0.6439278, 0.2966987, 0.41960785)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollectibleComponent" unique_id=211576331]
+y_sort_enabled = true
+position = Vector2(2.0000002, -3)
+rotation = 0.7463636
+shape = SubResource("CapsuleShape2D_e2a05")
+debug_color = Color(2.9841065e-06, 0.63410616, 0.43648645, 0.41960785)

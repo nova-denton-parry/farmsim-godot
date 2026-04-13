@@ -1,0 +1,20 @@
+# Godot 4 generated files
+.godot/
+
+# Imported assets (auto-regenerated)
+*.import
+
+# Export presets (contains sensitive paths)
+export_presets.cfg
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Licensed assets - not for redistribution
+assets/
+
+# Build outputs
+builds/
+export/

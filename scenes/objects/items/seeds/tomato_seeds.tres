@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Seeds" format=3 uid="uid://cprdituys4kak"]
+
+[ext_resource type="Texture2D" uid="uid://ddr327g02k874" path="res://assets/game/objects/new_crops/unwatered_plants/Farming Plants v2.png" id="1_3quy5"]
+[ext_resource type="PackedScene" uid="uid://khrfkpec1ful" path="res://scenes/objects/crops/crop_plants/tomato.tscn" id="1_s3l6t"]
+[ext_resource type="Script" uid="uid://dm821i0vcltxh" path="res://scenes/objects/items/seeds/seeds_class.gd" id="1_yq66r"]
+[ext_resource type="Texture2D" uid="uid://cg2ofhisxglpk" path="res://assets/game/objects/new_crops/crop_seeds/Farming Plants items v2.png" id="2_3quy5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3l6t"]
+atlas = ExtResource("1_3quy5")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj5vn"]
+atlas = ExtResource("2_3quy5")
+region = Rect2(0, 48, 16, 16)
+
+[resource]
+script = ExtResource("1_yq66r")
+planting_sprite = SubResource("AtlasTexture_s3l6t")
+crop_plant = ExtResource("1_s3l6t")
+item_name = "tomato seeds"
+sprite = SubResource("AtlasTexture_dj5vn")
+type = 1
+metadata/_custom_type_script = "uid://bt75mr3s3qk8d"

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Seeds" format=3 uid="uid://pp08pekbk8am"]
+
+[ext_resource type="PackedScene" uid="uid://b7wwopdn5vhuw" path="res://scenes/objects/crops/crop_plants/corn.tscn" id="1_lnuyh"]
+[ext_resource type="Script" uid="uid://dm821i0vcltxh" path="res://scenes/objects/items/seeds/seeds_class.gd" id="1_uop11"]
+[ext_resource type="Texture2D" uid="uid://cg2ofhisxglpk" path="res://assets/game/objects/new_crops/crop_seeds/Farming Plants items v2.png" id="2_uop11"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uop11"]
+load_path = "res://.godot/imported/Farming Plants v2.png-0a97501b967cf58bae64f0c37ca51ee2.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnuyh"]
+atlas = SubResource("CompressedTexture2D_uop11")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj5vn"]
+atlas = ExtResource("2_uop11")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_uop11")
+planting_sprite = SubResource("AtlasTexture_lnuyh")
+crop_plant = ExtResource("1_lnuyh")
+item_name = "corn seeds"
+sprite = SubResource("AtlasTexture_dj5vn")
+type = 1
+metadata/_custom_type_script = "uid://bt75mr3s3qk8d"

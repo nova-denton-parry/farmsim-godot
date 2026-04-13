@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dr8inmf2fivfm"]
+
+[ext_resource type="Script" uid="uid://dajur10pyukvl" path="res://scenes/components/mouse_location_component.gd" id="1_cfurp"]
+
+[node name="MouseLocationComponent" type="Node" unique_id=472897767]
+script = ExtResource("1_cfurp")
+
+[node name="PlantingPreviewSprite" type="Sprite2D" parent="." unique_id=1156411709]
