@@ -15,7 +15,7 @@ A cozy farming simulation game built in Godot 4 — currently in early developme
 Plant, water, and harvest crops across multiple growth stages. Growth progression is calculated automatically based on configurable stages and days until harvest. Unwatered crops won't advance — so don't forget to water! Currently supports corn and tomatoes.
 
 ### 🪓 Resource Gathering
-![Resource Gathering GIF](docs/gifs/crop_growth.gif)
+![Resource Gathering GIF](docs/gifs/tool_gathering.gif)
 Chop trees and mine rocks using tools. Each resource has configurable hit points before breaking.
 
 ### 🐄 NPC Animals
