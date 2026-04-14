@@ -11,10 +11,10 @@ func _ready() -> void:
 	
 	add_to_group("trees")
 
-func on_hurt(hit_damage: int, hit_component: HitComponent) -> void:
+func on_hurt(hit_damage: int, sprite: AnimatedSprite2D) -> void:
 	await get_tree().create_timer(0.5).timeout
 	material.set_shader_parameter("shake_intensity", 1.5)
-	await hit_component.awaitAnimationComplete()
+	await sprite.animation_finished
 	damage_component.apply_damage(hit_damage)
 	material.set_shader_parameter("shake_intensity", 0.0)
 
