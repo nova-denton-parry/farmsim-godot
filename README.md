@@ -73,7 +73,24 @@ git clone https://github.com/nova-denton-parry/farmsim-godot.git
 
 ## Roadmap
 
-*Coming soon — tracked via GitHub Projects.*
+## Roadmap
+
+Development is tracked via the [FarmSim Roadmap](https://github.com/users/nova-denton-parry/projects/1) project board.
+
+Planned features include:
+- 🌳 Resource respawning
+- 💰 Economy system
+- 🐄 Animal produce spawning
+- 🏠 Placeable objects
+- 🎯 Interaction area improvements
+- 💾 Save system refactor
+- And more!
+
+---
+
+## Contributing
+
+This is a solo personal project and is not currently open to external contributions. Feel free to fork the repo and experiment on your own!
 
 ---
 
