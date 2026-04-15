@@ -53,3 +53,4 @@ debug_color = Color(0.6509804, 0.40784314, 0.827451, 0.6509804)
 
 [node name="DamageComponent" parent="." unique_id=2076560408 instance=ExtResource("4_0ia52")]
 max_damage = 3
+should_respawn = true
