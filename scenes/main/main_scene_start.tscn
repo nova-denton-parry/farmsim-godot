@@ -115,6 +115,7 @@ navigation_polygon = SubResource("NavigationPolygon_yn88w")
 navigation_layers = 3
 
 [node name="DayNightCycleComponent" parent="World" unique_id=14397512 instance=ExtResource("6_h7s8j")]
+initial_hour = 6
 
 [node name="Player" parent="World" unique_id=615484630 instance=ExtResource("5_gf13d")]
 position = Vector2(307, 164)
