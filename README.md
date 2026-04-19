@@ -1,8 +1,8 @@
 # 🌱 FarmSim
 
-A cozy farming simulation game built in Godot 4 — currently in early development.
+A cozy farming simulation game built in Godot 4 -- currently in early development.
 
-> ⚠️ This project is in very early stages. It is a functional tech demo, not a polished game experience — yet. 
+> ⚠️ This project is in very early stages. It is a functional tech demo, not a polished game experience -- yet. 
 
 ![Gameplay GIF](docs/gifs/overall.gif)
 
@@ -12,7 +12,7 @@ A cozy farming simulation game built in Godot 4 — currently in early developme
 
 ### 🌾 Crop Farming
 ![Crop Growth GIF](docs/gifs/crop_growth.gif)
-Plant, water, and harvest crops across multiple growth stages. Growth progression is calculated automatically based on configurable stages and days until harvest. Unwatered crops won't advance — so don't forget to water! Currently supports corn and tomatoes.
+Plant, water, and harvest crops across multiple growth stages. Growth progression is calculated automatically based on configurable stages and days until harvest. Unwatered crops won't advance -- so don't forget to water! Currently supports corn and tomatoes.
 
 ### 🪓 Resource Gathering
 ![Resource Gathering GIF](docs/gifs/tool_gathering.gif?v=2)
@@ -97,16 +97,16 @@ This is a solo personal project and is not currently open to external contributi
 ## Credits
 
 ### Pixel Art Assets ( + one font )
-[CupNooble](https://cupnooble.itch.io/) — licensed for commercial use
+[CupNooble](https://cupnooble.itch.io/) -- licensed for commercial use
 
 ### All Other Fonts
-[Vexed](https://v3x3d.itch.io/) — licensed under [CC Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.en).
+[Vexed](https://v3x3d.itch.io/) -- licensed under [CC Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.en).
 
 ### Music
-[Pegonthetrack](https://pegonthetrack.itch.io/) & [ElvGames](https://elvgames.itch.io/) — licensed for commercial use
+[Pegonthetrack](https://pegonthetrack.itch.io/) & [ElvGames](https://elvgames.itch.io/) -- licensed for commercial use
 
 ### Sound Effects
-[Epic Stock Media](https://epicstockmedia.itch.io/) — licensed for commercial use
+[Epic Stock Media](https://epicstockmedia.itch.io/) -- licensed for commercial use
 
 ---
 
@@ -116,4 +116,4 @@ This project is licensed under the **GNU General Public License v3.0**. See [LIC
 
 ---
 
-*Built by [Nova Denton-Parry](https://github.com/nova-denton-parry) — developer by study, builder by nature.*
+*Built by [Nova Denton-Parry](https://github.com/nova-denton-parry) -- developer by study, builder by nature.*
