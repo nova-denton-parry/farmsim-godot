@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://ckq4q8ycb1vhn"]
 
-[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_sloqe"]
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/classes/item_class.gd" id="1_sloqe"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sloqe"]
 load_path = "res://.godot/imported/milk.png-4a46647e9d84c35eac28030e4f663322.ctex"

@@ -1,11 +1,10 @@
 extends PanelContainer
 class_name InventorySquare
 
-var current_item: Item = null
-var current_amount: int = 0
 var active: bool = false
 @export var disabled: bool = false
 @onready var texture_rect: TextureRect = $MarginContainer/TextureRect
+@onready var label: Label = $Label
 
 signal hovered
 signal unhovered
@@ -43,3 +42,14 @@ func on_active_changed() -> void:
 		self.theme_type_variation = "ActiveHotbarItem"
 	else:
 		self.theme_type_variation = "InventoryItemPanel"
+
+func show_entry(entry: InventoryEntry) -> void:
+	if entry != null and entry.item != null:
+		texture_rect.texture = entry.item.sprite
+		if entry.item.max_stack > 1:
+			label.text = str(entry.amount)
+		else:
+			label.text = ''
+	else:
+		texture_rect.texture = null
+		label.text = ''

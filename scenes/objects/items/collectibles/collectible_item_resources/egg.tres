@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://c61ovjtscloyj"]
 
-[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_rxt4d"]
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/classes/item_class.gd" id="1_rxt4d"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rxt4d"]
 load_path = "res://.godot/imported/egg_items.png-d372da412061ac71ad755972debc342a.ctex"

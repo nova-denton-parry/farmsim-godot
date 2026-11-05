@@ -12,15 +12,11 @@ func _ready() -> void:
 
 func on_time_tick(day: int, hour: int, minute: int) -> void:
 	day_label.text = "Day " + str(day)
-	if minute % 10 == 0:
-		time_label.text = "%02d:%02d" % [hour, minute]
-	if time_label.text == '' || time_label.text == '00:00':
-		@warning_ignore("integer_division")
-		# if the game time isn't set in the display, set it
-		# time label should be set with the minutes rounded to the nearest 10
-		# doesn't use snappedf as it should always round down
-		minute = (minute / 10) * 10
-		time_label.text = "%02d:%02d" % [hour, minute]
+	@warning_ignore('integer_division')
+	# this looks weird, but it effectively rounds down to ten
+	# snappedf doesn't work because it rounds to nearest - this needs to always round down
+	var rounded_minute: int = (minute / 10) * 10
+	time_label.text = '%02d:%02d' % [hour, rounded_minute]
 
 
 func _on_normal_speed_button_pressed() -> void:

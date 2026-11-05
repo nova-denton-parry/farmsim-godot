@@ -17,7 +17,6 @@ var distance: float
 
 var is_planting_preview: bool = false
 var is_plantable_cell: bool = false
-var active_inventory_square: InventorySquare = null
 
 const close_distance: int = 25
 const med_distance: int = 35
@@ -70,10 +69,9 @@ func cell_has_collision(layer: TileMapLayer,
 		return space_state.intersect_shape(query).size() > 0
 
 
-func on_active_seeds(sprite: Texture2D, cell: InventorySquare):
+func on_active_seeds(sprite: Texture2D) -> void:
 	planting_preview_sprite.texture = sprite
 	planting_preview_sprite.modulate.a = 0.5
-	active_inventory_square = cell
 
 
 func planting_preview():

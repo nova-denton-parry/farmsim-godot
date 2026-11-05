@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://cgh6va6qm0at3"]
 
-[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_dr66m"]
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/classes/item_class.gd" id="1_dr66m"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dr66m"]
 load_path = "res://.godot/imported/corn_harvest.png-e3d6ff4ceb5abd011905df87df7a941f.ctex"

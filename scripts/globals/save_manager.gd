@@ -3,11 +3,10 @@ extends Node
 const SAVE_PATH: String = "user://savegame.json"
 
 func save_game(
-	inventory_screen: InventoryScreen, 
 	player: Player, 
 	tilled_soil_layer: TileMapLayer) -> void:
 		var save_data = {
-			"inventory": get_inventory_data(inventory_screen),
+			"inventory": GameState.get_save_data(),
 			"player": get_player_data(player),
 			"world": get_world_data(tilled_soil_layer)
 		}
@@ -16,8 +15,8 @@ func save_game(
 		file.close()
 
 
-func load_game(inventory_screen: InventoryScreen, player: Player, 
-	tilled_soil_layer: TileMapLayer, parent_node: Node2D) -> void:
+func load_game(player: Player, tilled_soil_layer: TileMapLayer, 
+	parent_node: Node2D) -> void:
 		# load save file json data
 		if not FileAccess.file_exists(SAVE_PATH):
 			return
@@ -26,7 +25,7 @@ func load_game(inventory_screen: InventoryScreen, player: Player,
 		file.close()
 		
 		# distribute data to the correct systems
-		load_inventory_data(inventory_screen, save_data["inventory"])
+		GameState.load_save_data(save_data["inventory"])
 		load_player_data(player, save_data["player"])
 		load_world_data(save_data["world"], tilled_soil_layer, parent_node)
 
@@ -65,7 +64,7 @@ func get_world_data(tilled_soil_layer: TileMapLayer) -> Dictionary:
 	# add data for all rocks
 	for rock in get_tree().get_nodes_in_group("rocks"):
 		var damage_component = rock.get_node("DamageComponent")
-		data["trees"].append({
+		data["rocks"].append({
 			"position_x": rock.global_position.x,
 			"position_y": rock.global_position.y,
 			"scene_path": rock.scene_file_path,
@@ -155,13 +154,5 @@ func clear_world(tilled_soil_layer: TileMapLayer) -> void:
 	
 	# clear tilled tiles
 	tilled_soil_layer.clear()
-
-
-func get_inventory_data(inventory_screen: InventoryScreen) -> Array:
-	return inventory_screen.get_save_data()
-
-
-func load_inventory_data(inventory_screen: InventoryScreen, data: Array) -> void:
-	inventory_screen.load_save_data(data)
 
 

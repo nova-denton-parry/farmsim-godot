@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemDatabase" format=3 uid="uid://brwrejc2k7kxq"]
 
-[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/globals/item_class.gd" id="1_vatgk"]
+[ext_resource type="Script" uid="uid://bt75mr3s3qk8d" path="res://scripts/classes/item_class.gd" id="1_vatgk"]
 [ext_resource type="Resource" uid="uid://be66bpx1mxyl1" path="res://scenes/objects/items/tools/axe.tres" id="2_1is5m"]
 [ext_resource type="Script" uid="uid://dwvqaulc1egp5" path="res://scripts/globals/item_database.gd" id="2_v3f77"]
 [ext_resource type="Resource" uid="uid://bas1iw5msnwba" path="res://scenes/objects/items/tools/hoe.tres" id="3_2lmvt"]
